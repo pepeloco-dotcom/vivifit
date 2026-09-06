@@ -1,0 +1,2178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VivaFit | Talento que inspira</title>
+
+  <meta
+    name="description"
+    content="Únete a nuestro equipo. Descubre nuestras oportunidades laborales y forma parte de una empresa de moda en crecimiento."
+  >
+
+  <style>
+    /* =========================
+       VARIABLES
+    ========================= */
+    :root {
+      --navy: #17263c;
+      --purple: #5c4b75;
+      --purple-light: #806b98;
+      --green: #7f9b82;
+      --blue-light: #dce8ed;
+      --orange: #e7834f;
+      --orange-dark: #c96738;
+      --cream: #f8f3ec;
+      --white: #ffffff;
+      --black: #1d1d1d;
+      --gray: #6f6f6f;
+      --border: #e7dfd6;
+
+      --shadow: 0 15px 40px rgba(23, 38, 60, 0.10);
+      --radius: 22px;
+      --transition: 0.3s ease;
+    }
+
+    /* =========================
+       RESET
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(248, 243, 236, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: var(--navy);
+    }
+
+    .logo span {
+      color: var(--orange);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: var(--transition);
+    }
+
+    nav a:hover {
+      color: var(--orange);
+    }
+
+    .nav-cta {
+      background: var(--orange);
+      color: var(--white);
+      padding: 12px 20px;
+      border-radius: 30px;
+    }
+
+    .nav-cta:hover {
+      background: var(--orange-dark);
+      color: white;
+    }
+
+    .menu-btn {
+      display: none;
+      border: none;
+      background: transparent;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+    .hero {
+      min-height: 720px;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(23,38,60,0.95) 0%,
+          rgba(23,38,60,0.78) 45%,
+          rgba(23,38,60,0.15) 100%
+        ),
+        url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 680px;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: #ffd2b8;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(50px, 8vw, 100px);
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: -4px;
+      margin-bottom: 30px;
+    }
+
+    .hero h1 span {
+      color: #ff9b68;
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 600px;
+      margin-bottom: 35px;
+      color: #f1f1f1;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-weight: 800;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-light {
+      border-color: white;
+      color: white;
+      background: transparent;
+    }
+
+    .btn-light:hover {
+      background: white;
+      color: var(--navy);
+    }
+
+    /* =========================
+       SECCIONES
+    ========================= */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      max-width: 700px;
+      margin-bottom: 55px;
+    }
+
+    .section-tag {
+      color: var(--orange-dark);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: 1;
+      letter-spacing: -2px;
+      color: var(--navy);
+      text-transform: uppercase;
+    }
+
+    .section-description {
+      color: var(--gray);
+      margin-top: 18px;
+      font-size: 17px;
+    }
+
+    /* =========================
+       NOSOTROS
+    ========================= */
+    .about {
+      background: var(--cream);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 550px;
+      border-radius: var(--radius);
+      background:
+        url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85")
+        center/cover;
+      box-shadow: var(--shadow);
+    }
+
+    .about-text h3 {
+      font-size: 32px;
+      color: var(--navy);
+      margin-bottom: 15px;
+    }
+
+    .about-text p {
+      color: var(--gray);
+      margin-bottom: 25px;
+    }
+
+    /* =========================
+       AREAS
+    ========================= */
+    .areas {
+      background: var(--white);
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+    }
+
+    .area-card {
+      padding: 25px 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      transition: var(--transition);
+      background: white;
+    }
+
+    .area-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .area-icon {
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .area-card h3 {
+      font-size: 17px;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .area-card p {
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    /* =========================
+       CULTURA
+    ========================= */
+    .culture {
+      background: var(--navy);
+      color: white;
+    }
+
+    .culture .section-title {
+      color: white;
+    }
+
+    .culture .section-description {
+      color: #cbd3dd;
+    }
+
+    .culture-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-top: 35px;
+    }
+
+    .culture-item {
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 25px 15px;
+      border-radius: 18px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .culture-item:nth-child(1) {
+      background: var(--purple);
+    }
+
+    .culture-item:nth-child(2) {
+      background: var(--green);
+    }
+
+    .culture-item:nth-child(3) {
+      background: var(--orange);
+    }
+
+    .culture-item:nth-child(4) {
+      background: #4e7387;
+    }
+
+    .culture-item:nth-child(5) {
+      background: #765e89;
+    }
+
+    .quote {
+      margin-top: 55px;
+      font-size: clamp(24px, 4vw, 42px);
+      font-weight: 800;
+      max-width: 850px;
+      line-height: 1.15;
+    }
+
+    /* =========================
+       BENEFICIOS
+    ========================= */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .benefit {
+      padding: 30px;
+      border-radius: var(--radius);
+      background: white;
+      box-shadow: 0 5px 20px rgba(0,0,0,.04);
+    }
+
+    .benefit span {
+      font-size: 35px;
+    }
+
+    .benefit h3 {
+      color: var(--navy);
+      margin: 12px 0 8px;
+    }
+
+    .benefit p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    /* =========================
+       CONVOCATORIA
+    ========================= */
+    .job-section {
+      background: #f0e3d8;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 45px;
+    }
+
+    .job-badge {
+      background: var(--orange);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .job-layout {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 35px;
+    }
+
+    .job-card {
+      background: white;
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .job-card h3 {
+      color: var(--navy);
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .job-card ul {
+      list-style: none;
+    }
+
+    .job-card li {
+      padding: 10px 0 10px 28px;
+      position: relative;
+      color: var(--gray);
+      border-bottom: 1px solid #eee;
+    }
+
+    .job-card li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--orange);
+      font-weight: bold;
+    }
+
+    .mission {
+      background: var(--purple);
+      color: white;
+      border-radius: var(--radius);
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .mission h3 {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .mission p {
+      font-size: 18px;
+      color: #eee;
+    }
+
+    /* =========================
+       FUNCIONES
+    ========================= */
+    .functions-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .function-card {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+    }
+
+    .function-number {
+      font-size: 12px;
+      font-weight: 900;
+      color: var(--orange);
+    }
+
+    .function-card h3 {
+      color: var(--navy);
+      margin: 8px 0;
+    }
+
+    .function-card p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    /* =========================
+       PROCESO
+    ========================= */
+    .process {
+      background: var(--white);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 25px 12px;
+    }
+
+    .step-number {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: white;
+      display: grid;
+      place-items: center;
+      margin: auto auto 15px;
+      font-weight: 900;
+      font-size: 18px;
+    }
+
+    .step h3 {
+      font-size: 14px;
+      color: var(--navy);
+      text-transform: uppercase;
+    }
+
+    .step p {
+      color: var(--gray);
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    /* =========================
+       CTA POSTULACIÓN
+    ========================= */
+    .apply {
+      background: var(--orange);
+      color: white;
+      text-align: center;
+    }
+
+    .apply h2 {
+      font-size: clamp(38px, 6vw, 70px);
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .apply p {
+      max-width: 650px;
+      margin: auto auto 30px;
+      font-size: 18px;
+    }
+
+    .apply .btn {
+      background: var(--navy);
+    }
+
+    .apply .btn:hover {
+      background: #0e1725;
+    }
+
+    /* =========================
+       FORMULARIO
+    ========================= */
+    .form-section {
+      background: var(--cream);
+    }
+
+    .form-wrapper {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      padding: 45px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    input,
+    select,
+    textarea {
+      border: 1px solid #ddd;
+      padding: 14px;
+      border-radius: 10px;
+      outline: none;
+      background: #fafafa;
+      transition: var(--transition);
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--orange);
+      background: white;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .file-box {
+      border: 2px dashed #ddd;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      color: var(--gray);
+    }
+
+    .form-submit {
+      margin-top: 25px;
+      width: 100%;
+    }
+
+    .success-message {
+      display: none;
+      margin-top: 20px;
+      padding: 18px;
+      background: #e5f2e6;
+      color: #35633a;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    /* =========================
+       BIENVENIDA
+    ========================= */
+    .welcome {
+      background: var(--green);
+      color: white;
+    }
+
+    .welcome .section-title {
+      color: white;
+    }
+
+    .welcome .section-description {
+      color: #edf4ee;
+    }
+
+    .welcome-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .welcome-card {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: var(--radius);
+      padding: 35px;
+    }
+
+    .welcome-card h3 {
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .welcome-card ul {
+      list-style: none;
+    }
+
+    .welcome-card li {
+      padding: 8px 0;
+    }
+
+    /* =========================
+       PRIMERA SEMANA
+    ========================= */
+    .week {
+      background: var(--blue-light);
+    }
+
+    .week-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+    }
+
+    .day {
+      background: white;
+      padding: 25px 18px;
+      border-radius: 18px;
+      border-top: 5px solid var(--navy);
+    }
+
+    .day strong {
+      color: var(--orange-dark);
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .day h3 {
+      color: var(--navy);
+      margin: 8px 0;
+      font-size: 18px;
+    }
+
+    .day p {
+      color: var(--gray);
+      font-size: 13px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+    footer {
+      background: #101a29;
+      color: white;
+      padding: 55px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    footer h3 {
+      margin-bottom: 12px;
+    }
+
+    footer p,
+    footer a {
+      color: #aeb7c3;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 20px;
+      color: #8994a2;
+      font-size: 12px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+    @media (max-width: 1000px) {
+
+      .areas-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .culture-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .functions-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .week-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background: var(--cream);
+        padding: 25px;
+        flex-direction: column;
+        align-items: stretch;
+        box-shadow: var(--shadow);
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .hero {
+        min-height: 650px;
+      }
+
+      .about-grid,
+      .job-layout,
+      .welcome-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        min-height: 400px;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+
+      section {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .areas-grid,
+      .culture-grid,
+      .benefits-grid,
+      .functions-grid,
+      .process-grid,
+      .week-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .job-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .job-card,
+      .mission,
+      .form-wrapper,
+      .welcome-card {
+        padding: 25px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+  <header>
+    <div class="container navbar">
+
+      <a href="#inicio" class="logo">
+        VivaFit<span>.</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+        ☰
+      </button>
+
+      <nav id="navMenu">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#convocatoria">Convocatoria</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#bienvenido">Bienvenido</a>
+        <a href="#postular" class="nav-cta">Postula aquí</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+  <main>
+
+    <section class="hero" id="inicio">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Talento + Moda + Crecimiento
+          </span>
+
+          <h1>
+            VivaFit tu <span>talento.</span><br>
+            Crece con nosotros.
+          </h1>
+
+          <p>
+            Somos una empresa de moda que busca personas con actitud,
+            creatividad y pasión por brindar experiencias increíbles
+            a nuestros clientes.
+          </p>
+
+          <div class="buttons">
+            <a href="#convocatoria" class="btn btn-primary">
+              Ver convocatoria →
+            </a>
+
+            <a href="#nosotros" class="btn btn-light">
+              Conoce nuestra cultura
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         NOSOTROS
+    ========================= -->
+    <section class="about" id="nosotros">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-image"></div>
+
+          <div class="about-text">
+
+            <div class="section-tag">
+              01 — Nosotros
+            </div>
+
+            <h2 class="section-title">
+              Una marca que también crece con su gente.
+            </h2>
+
+            <p>
+              Somos una empresa dedicada al diseño, producción y
+              comercialización de prendas de vestir.
+            </p>
+
+            <p>
+              Creamos ropa con diseños innovadores, buena calidad
+              y estilos que buscan responder a las tendencias y
+              necesidades de nuestros clientes.
+            </p>
+
+            <p>
+              Pero nuestra colección más importante también está
+              formada por las personas que hacen posible cada experiencia.
+            </p>
+
+            <a href="#convocatoria" class="btn btn-primary">
+              Quiero formar parte →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         AREAS
+    ========================= -->
+    <section class="areas">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-tag">
+            Nuestro equipo
+          </div>
+
+          <h2 class="section-title">
+            Todos movemos la misma colección.
+          </h2>
+
+          <p class="section-description">
+            Diferentes talentos, un mismo objetivo.
+          </p>
+
+        </div>
+
+        <div class="areas-grid">
+
+          <article class="area-card">
+            <div class="area-icon">🎨</div>
+            <h3>Creativa</h3>
+            <p>
+              Diseña las prendas y define el estilo e identidad de la marca.
+            </p>
+          </article>
+
+          <article class="area-card">
+            <div class="area-icon">🧵</div>
+            <h3>Producción</h3>
+            <p>
+              Confecciona las prendas y controla su calidad.
+            </p>
+          </article>
+
+          <article class="area-card">
+            <div class="area-icon">🚚</div>
+            <h3>Logística</h3>
+            <p>
+              Organiza almacenamiento, despacho y distribución.
+            </p>
+          </article>
+
+          <article class="area-card">
+            <div class="area-icon">🛍️</div>
+            <h3>Comercial</h3>
+            <p>
+              Atiende clientes, realiza ventas y gestiona la presencia de la marca.
+            </p>
+          </article>
+
+          <article class="area-card">
+            <div class="area-icon">📊</div>
+            <h3>Administración</h3>
+            <p>
+              Gestiona ingresos, gastos, pagos e inventario.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CULTURA
+    ========================= -->
+    <section class="culture">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-tag">
+            Nuestra cultura
+          </div>
+
+          <h2 class="section-title">
+            Lo que nos mueve.
+          </h2>
+
+          <p class="section-description">
+            Queremos construir un lugar donde cada persona pueda aportar,
+            aprender y crecer.
+          </p>
+
+        </div>
+
+        <div class="culture-grid">
+
+          <div class="culture-item">CREATIVIDAD</div>
+          <div class="culture-item">TRABAJO EN EQUIPO</div>
+          <div class="culture-item">CLIENTE</div>
+          <div class="culture-item">RESPONSABILIDAD</div>
+          <div class="culture-item">INNOVACIÓN</div>
+
+        </div>
+
+        <div class="quote">
+          “No solo vendemos ropa, construimos experiencias para nuestros clientes.”
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BENEFICIOS
+    ========================= -->
+    <section>
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-tag">
+            ¿Por qué trabajar con nosotros?
+          </div>
+
+          <h2 class="section-title">
+            Tu crecimiento también importa.
+          </h2>
+
+        </div>
+
+        <div class="benefits-grid">
+
+          <article class="benefit">
+            <span>✨</span>
+            <h3>Ambiente dinámico</h3>
+            <p>
+              Forma parte de un equipo activo y creativo.
+            </p>
+          </article>
+
+          <article class="benefit">
+            <span>🤝</span>
+            <h3>Trabajo en equipo</h3>
+            <p>
+              Creemos en el compañerismo y la colaboración.
+            </p>
+          </article>
+
+          <article class="benefit">
+            <span>📚</span>
+            <h3>Aprendizaje</h3>
+            <p>
+              Desarrolla nuevas habilidades y experiencias.
+            </p>
+          </article>
+
+          <article class="benefit">
+            <span>🚀</span>
+            <h3>Crecimiento</h3>
+            <p>
+              Construye oportunidades para tu desarrollo profesional.
+            </p>
+          </article>
+
+          <article class="benefit">
+            <span>👗</span>
+            <h3>Mundo de la moda</h3>
+            <p>
+              Sé parte de una empresa vinculada al mundo de la moda.
+            </p>
+          </article>
+
+          <article class="benefit">
+            <span>💡</span>
+            <h3>Tus ideas importan</h3>
+            <p>
+              Encuentra espacio para aportar y desarrollar tus ideas.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONVOCATORIA
+    ========================= -->
+    <section class="job-section" id="convocatoria">
+
+      <div class="container">
+
+        <div class="job-header">
+
+          <div class="section-header" style="margin-bottom:0">
+
+            <div class="section-tag">
+              02 — Convocatoria
+            </div>
+
+            <h2 class="section-title">
+              ¡Buscamos vendedor/a!
+            </h2>
+
+            <p class="section-description">
+              Área Comercial · Atención al cliente · Ventas
+            </p>
+
+          </div>
+
+          <div class="job-badge">
+            Vacante disponible
+          </div>
+
+        </div>
+
+
+        <div class="job-layout">
+
+          <div class="job-card">
+
+            <h3>¿Qué buscamos?</h3>
+
+            <ul>
+              <li>Secundaria completa o estudios superiores.</li>
+              <li>Experiencia de 6 meses a 1 año en ventas.</li>
+              <li>Interés por la moda y atención al cliente.</li>
+              <li>Buena comunicación.</li>
+              <li>Capacidad para trabajar en equipo.</li>
+              <li>Orientación al cliente.</li>
+              <li>Empatía y actitud positiva.</li>
+            </ul>
+
+          </div>
+
+
+          <div class="mission">
+
+            <h3>Tu misión</h3>
+
+            <p>
+              Atender a nuestros clientes, ofrecer nuestros productos
+              y contribuir al cumplimiento de las metas de venta de
+              la empresa.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         COMPETENCIAS
+    ========================= -->
+    <section>
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-tag">
+            Competencias
+          </div>
+
+          <h2 class="section-title">
+            El talento que buscamos.
+          </h2>
+
+        </div>
+
+        <div class="benefits-grid">
+
+          <article class="benefit">
+            <span>🗣️</span>
+            <h3>Comunicación efectiva</h3>
+            <p>Sabes escuchar y transmitir tus ideas.</p>
+          </article>
+
+          <article class="benefit">
+            <span>❤️</span>
+            <h3>Orientación al cliente</h3>
+            <p>Te interesa generar una buena experiencia.</p>
+          </article>
+
+          <article class="benefit">
+            <span>🤝</span>
+            <h3>Trabajo en equipo</h3>
+            <p>Colaboras y construyes junto a los demás.</p>
+          </article>
+
+          <article class="benefit">
+            <span>😊</span>
+            <h3>Empatía</h3>
+            <p>Comprendes las necesidades de las personas.</p>
+          </article>
+
+          <article class="benefit">
+            <span>🎯</span>
+            <h3>Resultados</h3>
+            <p>Trabajas orientado/a al cumplimiento de objetivos.</p>
+          </article>
+
+          <article class="benefit">
+            <span>⚡</span>
+            <h3>Proactividad</h3>
+            <p>Te anticipas y buscas soluciones.</p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FUNCIONES
+    ========================= -->
+    <section class="areas">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-tag">
+            El puesto
+          </div>
+
+          <h2 class="section-title">
+            ¿Qué harás?
+          </h2>
+
+        </div>
+
+        <div class="functions-grid">
+
+          <article class="function-card">
+            <div class="function-number">01</div>
+            <h3>Atender</h3>
+            <p>Recibir cordialmente a nuestros clientes.</p>
+          </article>
+
+          <article class="function-card">
+            <div class="function-number">02</div>
+            <h3>Identificar</h3>
+            <p>Conocer sus necesidades y preferencias.</p>
+          </article>
+
+          <article class="function-card">
+            <div class="function-number">03</div>
+            <h3>Asesorar</h3>
+            <p>Recomendar productos, tallas y colores.</p>
+          </article>
+
+          <article class="function-card">
+            <div class="function-number">04</div>
+            <h3>Vender</h3>
+            <p>Realizar y cerrar ventas.</p>
+          </article>
+
+          <article class="function-card">
+            <div class="function-number">05</div>
+            <h3>Organizar</h3>
+            <p>Mantener el espacio atractivo y ordenado.</p>
+          </article>
+
+          <article class="function-card">
+            <div class="function-number">06</div>
+            <h3>Controlar</h3>
+            <p>Apoyar en el control de productos e inventario.</p>
+          </article>
+
+          <article class="function-card">
+            <div class="function-number">07</div>
+            <h3>Alcanzar</h3>
+            <p>Cumplir las metas comerciales establecidas.</p>
+          </article>
+
+          <article class="function-card">
+            <div class="function-number">08</div>
+            <h3>Conectar</h3>
+            <p>Brindar una experiencia positiva al cliente.</p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROCESO
+    ========================= -->
+    <section class="process" id="proceso">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-tag">
+            Nuestro proceso
+          </div>
+
+          <h2 class="section-title">
+            Tu camino comienza aquí.
+          </h2>
+
+          <p class="section-description">
+            Queremos que conozcas cada etapa del proceso de selección.
+          </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+          <div class="step">
+            <div class="step-number">01</div>
+            <h3>Postulación</h3>
+            <p>Completa el formulario y envíanos tu CV.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">02</div>
+            <h3>Revisión</h3>
+            <p>Revisamos experiencia y competencias.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">03</div>
+            <h3>Entrevista</h3>
+            <p>Queremos conocerte y conocer tus expectativas.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">04</div>
+            <h3>Evaluación</h3>
+            <p>Evaluamos habilidades de atención y ventas.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">05</div>
+            <h3>Selección</h3>
+            <p>Nos contactaremos contigo.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">06</div>
+            <h3>Contratación</h3>
+            <p>¡Bienvenido/a oficialmente al equipo!</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+    <section class="apply">
+
+      <div class="container">
+
+        <h2>
+          ¿Listo/a para<br>
+          dar el siguiente paso?
+        </h2>
+
+        <p>
+          Tu próxima oportunidad puede comenzar con una postulación.
+        </p>
+
+        <a href="#postular" class="btn">
+          QUIERO SER PARTE DEL EQUIPO →
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FORMULARIO
+    ========================= -->
+    <section class="form-section" id="postular">
+
+      <div class="container">
+
+        <div class="section-header" style="margin:auto auto 40px; text-align:center;">
+
+          <div class="section-tag">
+            Postulación
+          </div>
+
+          <h2 class="section-title">
+            Queremos conocerte.
+          </h2>
+
+          <p class="section-description">
+            Completa tus datos y da el primer paso para formar parte de nuestro equipo.
+          </p>
+
+        </div>
+
+
+        <div class="form-wrapper">
+
+          <form id="applicationForm">
+
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label for="name">
+                  Nombre completo *
+                </label>
+
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Tu nombre completo"
+                  required
+                >
+              </div>
+
+
+              <div class="form-group">
+                <label for="email">
+                  Correo electrónico *
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="correo@ejemplo.com"
+                  required
+                >
+              </div>
+
+
+              <div class="form-group">
+                <label for="phone">
+                  Teléfono *
+                </label>
+
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+51 999 999 999"
+                  required
+                >
+              </div>
+
+
+              <div class="form-group">
+                <label for="position">
+                  Puesto *
+                </label>
+
+                <select id="position" name="position" required>
+
+                  <option value="">
+                    Selecciona una opción
+                  </option>
+
+                  <option value="vendedor">
+                    Vendedor/a
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group full">
+
+                <label for="experience">
+                  Cuéntanos brevemente sobre tu experiencia
+                </label>
+
+                <textarea
+                  id="experience"
+                  name="experience"
+                  placeholder="Cuéntanos sobre tu experiencia en ventas, atención al cliente o moda..."
+                ></textarea>
+
+              </div>
+
+
+              <div class="form-group full">
+
+                <label for="cv">
+                  Adjunta tu CV *
+                </label>
+
+                <div class="file-box">
+
+                  <input
+                    type="file"
+                    id="cv"
+                    name="cv"
+                    accept=".pdf,.doc,.docx"
+                    required
+                  >
+
+                  <p style="margin-top:8px;">
+                    Formatos permitidos: PDF, DOC o DOCX
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary form-submit"
+            >
+              ENVIAR MI POSTULACIÓN →
+            </button>
+
+
+            <div
+              class="success-message"
+              id="successMessage"
+            >
+              🎉 ¡Gracias por postularte! Hemos recibido tu información.
+              Nuestro equipo revisará tu perfil y se pondrá en contacto contigo.
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BIENVENIDO
+    ========================= -->
+    <section class="welcome" id="bienvenido">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-tag" style="color:#eaf4eb;">
+            03 — Bienvenido/a
+          </div>
+
+          <h2 class="section-title">
+            ¡Felicidades!
+          </h2>
+
+          <p class="section-description">
+            Estamos muy felices de tenerte con nosotros.
+          </p>
+
+        </div>
+
+
+        <div class="welcome-grid">
+
+          <div class="welcome-card">
+
+            <h3>👔 Conoce nuestra empresa</h3>
+
+            <ul>
+              <li>✓ Historia y actividad principal.</li>
+              <li>✓ Productos y servicios.</li>
+              <li>✓ Misión y visión.</li>
+              <li>✓ Objetivos de la organización.</li>
+            </ul>
+
+          </div>
+
+
+          <div class="welcome-card">
+
+            <h3>👥 Conoce nuestro equipo</h3>
+
+            <ul>
+              <li>🎨 Creativa</li>
+              <li>🧵 Producción</li>
+              <li>🚚 Logística</li>
+              <li>🛍️ Comercial</li>
+              <li>📊 Administrativa y Financiera</li>
+            </ul>
+
+          </div>
+
+
+          <div class="welcome-card">
+
+            <h3>💙 Nuestra cultura</h3>
+
+            <p>
+              Responsabilidad · Respeto · Trabajo en equipo ·
+              Orientación al cliente · Innovación
+            </p>
+
+          </div>
+
+
+          <div class="welcome-card">
+
+            <h3>🛍️ Tu nuevo rol</h3>
+
+            <p>
+              Tu misión será brindar una excelente atención al cliente
+              y contribuir al crecimiento de nuestras ventas mediante
+              una experiencia de compra positiva.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INDUCCIÓN
+    ========================= -->
+    <section>
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-tag">
+            Inducción al puesto
+          </div>
+
+          <h2 class="section-title">
+            Tu nuevo rol, paso a paso.
+          </h2>
+
+        </div>
+
+
+        <div class="benefits-grid">
+
+          <article class="benefit">
+            <span>👗</span>
+            <h3>Conocimiento de productos</h3>
+            <p>
+              Aprenderás sobre prendas, tallas, colores y estilos.
+            </p>
+          </article>
+
+          <article class="benefit">
+            <span>🗣️</span>
+            <h3>Atención al cliente</h3>
+            <p>
+              Técnicas para recibir, escuchar y orientar correctamente.
+            </p>
+          </article>
+
+          <article class="benefit">
+            <span>💰</span>
+            <h3>Proceso de venta</h3>
+            <p>
+              Desde el primer contacto hasta el cierre de la venta.
+            </p>
+          </article>
+
+          <article class="benefit">
+            <span>📦</span>
+            <h3>Manejo de productos</h3>
+            <p>
+              Procedimientos relacionados con orden y control.
+            </p>
+          </article>
+
+          <article class="benefit">
+            <span>🎯</span>
+            <h3>Metas comerciales</h3>
+            <p>
+              Conocerás objetivos e indicadores de desempeño.
+            </p>
+          </article>
+
+          <article class="benefit">
+            <span>🤝</span>
+            <h3>Trabajo en equipo</h3>
+            <p>
+              Aprenderás a coordinar con las diferentes áreas.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRIMERA SEMANA
+    ========================= -->
+    <section class="week">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-tag">
+            Tu primera semana
+          </div>
+
+          <h2 class="section-title">
+            Comienza tu historia.
+          </h2>
+
+        </div>
+
+
+        <div class="week-grid">
+
+          <article class="day">
+            <strong>Día 01</strong>
+            <h3>Bienvenida</h3>
+            <p>
+              Presentación de la empresa y del equipo.
+            </p>
+          </article>
+
+          <article class="day">
+            <strong>Día 02</strong>
+            <h3>Conoce la colección</h3>
+            <p>
+              Productos, estilos, tallas y características.
+            </p>
+          </article>
+
+          <article class="day">
+            <strong>Día 03</strong>
+            <h3>Atención al cliente</h3>
+            <p>
+              Capacitación y técnicas de atención.
+            </p>
+          </article>
+
+          <article class="day">
+            <strong>Día 04</strong>
+            <h3>Técnicas de venta</h3>
+            <p>
+              Ventas y manejo de situaciones con clientes.
+            </p>
+          </article>
+
+          <article class="day">
+            <strong>Día 05</strong>
+            <h3>Práctica</h3>
+            <p>
+              Práctica acompañada y retroalimentación.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MENSAJE FINAL
+    ========================= -->
+    <section style="background:var(--navy); color:white; text-align:center;">
+
+      <div class="container">
+
+        <div class="section-tag" style="color:#ffb18c;">
+          Nuestra colección también eres tú
+        </div>
+
+        <h2
+          style="
+            font-size:clamp(40px,7vw,80px);
+            line-height:1;
+            margin-bottom:25px;
+          "
+        >
+          Tu talento también<br>
+          es parte de nuestra colección.
+        </h2>
+
+        <p
+          style="
+            max-width:650px;
+            margin:auto;
+            color:#d5dbe2;
+            font-size:18px;
+          "
+        >
+          Estamos felices de que hayas decidido crecer con nosotros.
+          ¡Bienvenido/a al equipo! 👕✨
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+  
+<section id="integrantes" style="padding: 50px 20px; text-align: center;">
+  <h2>Integrantes del grupo</h2>
+  <div style="margin: 25px auto 0; max-width: 600px; text-align: left;">
+    <ol style="line-height: 1.9; font-size: 1.05rem;">
+      <li>Caro Romero Rocio Celeste</li>
+      <li>Carrillo Cronejo Natalia</li>
+      <li>Pacheco Cangalaya Marlene</li>
+      <li>Toscano Altez Rosa Jackeline</li>
+      <li>Valverde Cabrera Kateryn Mercedes</li>
+      <li>Vasquez Epequin Jose Genaro</li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <div class="logo" style="color:white; margin-bottom:15px;">
+            VivaFit<span>.</span>
+          </div>
+
+          <p>
+            Moda, talento y oportunidades.
+            Construimos experiencias para nuestros clientes
+            y oportunidades para nuestra gente.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>Explora</h3>
+
+          <p>
+            <a href="#nosotros">Nosotros</a>
+          </p>
+
+          <p>
+            <a href="#convocatoria">Convocatoria</a>
+          </p>
+
+          <p>
+            <a href="#proceso">Proceso de selección</a>
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>Talento</h3>
+
+          <p>
+            <a href="#postular">Postula aquí</a>
+          </p>
+
+          <p>
+            <a href="#bienvenido">Bienvenido/a</a>
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+        © 2026 VivaFit. Todos los derechos reservados.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+  <script>
+
+    /* =========================
+       MENÚ RESPONSIVE
+    ========================= */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navMenu = document.getElementById("navMenu");
+
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+
+
+    /* Cerrar menú al hacer click */
+
+    document.querySelectorAll("nav a").forEach(link => {
+
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+      });
+
+    });
+
+
+    /* =========================
+       FORMULARIO
+    ========================= */
+
+    const form = document.getElementById("applicationForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const position = document.getElementById("position").value;
+      const cv = document.getElementById("cv").files[0];
+
+      if (!name || !email || !phone || !position || !cv) {
+
+        alert("Por favor completa todos los campos obligatorios.");
+
+        return;
+      }
+
+
+      /* Validar archivo */
+
+      const allowedTypes = [
+        "application/pdf",
+        "application/msword",
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      ];
+
+      if (!allowedTypes.includes(cv.type)) {
+
+        alert("Por favor adjunta un archivo PDF, DOC o DOCX.");
+
+        return;
+      }
+
+
+      /* Mostrar mensaje */
+
+      successMessage.style.display = "block";
+
+      successMessage.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+
+
+      /* Limpiar formulario */
+
+      form.reset();
+
+    });
+
+  </script>
+
+</body>
+</html>
